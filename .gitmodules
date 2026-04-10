@@ -1,0 +1,15 @@
+[submodule "lib/Fable"]
+	path = lib/Fable
+	url = ../Fable
+[submodule "lib/fsharp"]
+	path = lib/fsharp
+	url = ../fsharp
+[submodule "lib/fsharp-wasm-core"]
+	path = lib/fsharp-wasm-core
+	url = ../fsharp-wasm-core
+[submodule "lib/fsharp-wasmecto"]
+	path = lib/fsharp-wasmecto
+	url = ../fsharp-wasmecto
+[submodule "lib/fsharp-wasm"]
+	path = lib/fsharp-wasm
+	url = ../fsharp-wasm
