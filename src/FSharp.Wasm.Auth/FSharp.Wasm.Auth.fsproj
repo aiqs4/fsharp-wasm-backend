@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>FSharp.Wasm.Auth</RootNamespace>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Attributes.fs" />
+    <Compile Include="Claims.fs" />
+    <Compile Include="Token.fs" />
+    <Compile Include="Capability.fs" />
+    <Compile Include="AuthMiddleware.fs" />
+    <Compile Include="PatchFilter.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../FSharp.Wasm.Host/FSharp.Wasm.Host.fsproj" />
+    <ProjectReference Include="../FSharp.Wasm.Protocol/FSharp.Wasm.Protocol.fsproj" />
+  </ItemGroup>
+
+</Project>
