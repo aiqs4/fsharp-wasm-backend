@@ -17,12 +17,12 @@ type IKvStore =
     /// <summary>Get a value by key, returning None if the key does not exist.</summary>
     /// <param name="key">The key to look up.</param>
     /// <returns>The deserialized value, or None.</returns>
-    abstract member Get<'T> : key: string -> Async<'T option>
+    abstract member Get<'T when 'T : not null> : key: string -> Async<'T option>
 
     /// <summary>Set a value for the given key, creating or overwriting.</summary>
     /// <param name="key">The key to set.</param>
     /// <param name="value">The value to store.</param>
-    abstract member Set<'T> : key: string -> value: 'T -> Async<unit>
+    abstract member Set<'T when 'T : not null> : key: string -> value: 'T -> Async<unit>
 
     /// <summary>Delete a key from the store.</summary>
     /// <param name="key">The key to delete.</param>
@@ -91,12 +91,12 @@ module Kv =
     /// <summary>Get a value by key.</summary>
     /// <param name="key">The key to look up.</param>
     /// <returns>The deserialized value, or None.</returns>
-    let get<'T> (key: string) : Async<'T option> = store.Get<'T>(key)
+    let get<'T when 'T : not null> (key: string) : Async<'T option> = store.Get<'T>(key)
 
     /// <summary>Set a value for the given key.</summary>
     /// <param name="key">The key to set.</param>
     /// <param name="value">The value to store.</param>
-    let set<'T> (key: string) (value: 'T) : Async<unit> = store.Set<'T> key value
+    let set<'T when 'T : not null> (key: string) (value: 'T) : Async<unit> = store.Set<'T> key value
 
     /// <summary>Delete a key from the store.</summary>
     /// <param name="key">The key to delete.</param>

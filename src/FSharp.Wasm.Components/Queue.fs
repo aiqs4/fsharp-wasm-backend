@@ -55,16 +55,16 @@ type MemoryQueue<'T>() =
     let acknowledged = ConcurrentDictionary<string, bool>()
 
     interface IMessageQueue with
-        member _.Send<'U>(message: 'U) =
+        member _.Send<'U when 'U : not null>(message: 'U) =
             async { queue.Enqueue(message :> obj) }
 
-        member _.SendBatch<'U>(messages: 'U list) =
+        member _.SendBatch<'U when 'U : not null>(messages: 'U list) =
             async {
                 for msg in messages do
                     queue.Enqueue(msg :> obj)
             }
 
-        member _.Receive<'U>() =
+        member _.Receive<'U when 'U : not null>() =
             async {
                 match queue.TryDequeue() with
                 | true, value -> return Some(value :?> 'U)

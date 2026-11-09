@@ -44,10 +44,10 @@ type MemoryDurableStateStore() =
     let store = ConcurrentDictionary<string, obj>()
 
     interface IDurableStateStore with
-        member _.Save<'T>(id: string) (state: 'T) =
+        member _.Save<'T when 'T : not null>(id: string) (state: 'T) =
             async { store.[id] <- (state :> obj) }
 
-        member _.Load<'T>(id: string) =
+        member _.Load<'T when 'T : not null>(id: string) =
             async {
                 match store.TryGetValue(id) with
                 | true, value -> return Some(value :?> 'T)
