@@ -1,0 +1,17 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/FSharp.Wasm.Auth/FSharp.Wasm.Auth.fsproj" />
+    <Project Path="src/FSharp.Wasm.Components/FSharp.Wasm.Components.fsproj" />
+    <Project Path="src/FSharp.Wasm.Contract/FSharp.Wasm.Contract.fsproj" />
+    <Project Path="src/FSharp.Wasm.Dev/FSharp.Wasm.Dev.fsproj" />
+    <Project Path="src/FSharp.Wasm.Ghost/FSharp.Wasm.Ghost.fsproj" />
+    <Project Path="src/FSharp.Wasm.Host/FSharp.Wasm.Host.fsproj" />
+    <Project Path="src/FSharp.Wasm.Observability/FSharp.Wasm.Observability.fsproj" />
+    <Project Path="src/FSharp.Wasm.Protocol/FSharp.Wasm.Protocol.fsproj" />
+    <Project Path="src/FSharp.Wasm.Reactive/FSharp.Wasm.Reactive.fsproj" />
+    <Project Path="src/FSharp.Wasm.Sdk/FSharp.Wasm.Sdk.fsproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/FSharp.Wasm.Tests/FSharp.Wasm.Tests.fsproj" />
+  </Folder>
+</Solution>

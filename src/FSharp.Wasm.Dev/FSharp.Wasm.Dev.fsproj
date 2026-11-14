@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <RootNamespace>FSharp.Wasm.Dev</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="FileWatcher.fs" />
+    <Compile Include="SplitValidator.fs" />
+    <Compile Include="Benchmark.fs" />
+    <Compile Include="GhostInspector.fs" />
+    <Compile Include="DevServer.fs" />
+    <Compile Include="CliCommands.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../FSharp.Wasm.Sdk/FSharp.Wasm.Sdk.fsproj" />
+    <ProjectReference Include="../FSharp.Wasm.Ghost/FSharp.Wasm.Ghost.fsproj" />
+    <ProjectReference Include="../FSharp.Wasm.Protocol/FSharp.Wasm.Protocol.fsproj" />
+    <ProjectReference Include="../FSharp.Wasm.Observability/FSharp.Wasm.Observability.fsproj" />
+  </ItemGroup>
+
+</Project>

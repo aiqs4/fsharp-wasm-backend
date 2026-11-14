@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <RootNamespace>FSharp.Wasm.Observability</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Attributes.fs" />
+    <Compile Include="Tracing.fs" />
+    <Compile Include="Metrics.fs" />
+    <Compile Include="PatchTracing.fs" />
+    <Compile Include="Exporter.fs" />
+    <Compile Include="AutoInstrumentation.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../FSharp.Wasm.Protocol/FSharp.Wasm.Protocol.fsproj" />
+  </ItemGroup>
+
+</Project>
